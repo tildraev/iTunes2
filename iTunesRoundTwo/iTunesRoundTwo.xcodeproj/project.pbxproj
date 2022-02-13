@@ -17,6 +17,7 @@
 		D21D74BF27B99A72000E5ECB /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74BE27B99A72000E5ECB /* Results.swift */; };
 		D21D74C127B99A98000E5ECB /* SearchAlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74C027B99A98000E5ECB /* SearchAlbumTableViewController.swift */; };
 		D21D74C327B99AAD000E5ECB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74C227B99AAD000E5ECB /* DetailViewController.swift */; };
+		D21D74C527B9A675000E5ECB /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74C427B9A675000E5ECB /* AlbumTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D21D74BE27B99A72000E5ECB /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		D21D74C027B99A98000E5ECB /* SearchAlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlbumTableViewController.swift; sourceTree = "<group>"; };
 		D21D74C227B99AAD000E5ECB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D21D74C427B9A675000E5ECB /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		D21D74B427B99A13000E5ECB /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D21D74C427B9A675000E5ECB /* AlbumTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				D21D74BF27B99A72000E5ECB /* Results.swift in Sources */,
 				D21D74C127B99A98000E5ECB /* SearchAlbumTableViewController.swift in Sources */,
 				D21D74C327B99AAD000E5ECB /* DetailViewController.swift in Sources */,
+				D21D74C527B9A675000E5ECB /* AlbumTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

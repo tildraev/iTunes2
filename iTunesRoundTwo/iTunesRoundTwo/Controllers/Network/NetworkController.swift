@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit.UIImage
 
 class NetworkController {
     private static let baseURL = URL(string: "https://itunes.apple.com")
@@ -74,7 +75,32 @@ class NetworkController {
             } catch {
                 completion(.failure(.unableToDecode))
             }
-
+            
+        }.resume()
+    }
+    
+    static func fetchCoverArt(artworkURL: String, completion: @escaping (Result<UIImage, ResultError>) -> Void) {
+        guard let baseURL = URL(string: artworkURL) else {
+            completion(.failure(.invalidURL("")))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: baseURL) { data, _, error in
+            if let error = error {
+                completion(.failure(.thrownError(error)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            guard let albumImage = UIImage(data: data) else {
+                completion(.failure(.unableToDecode))
+                return
+            }
+            completion(.success(albumImage))
         }.resume()
     }
 }

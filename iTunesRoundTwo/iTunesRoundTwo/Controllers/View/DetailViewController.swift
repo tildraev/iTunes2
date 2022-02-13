@@ -14,6 +14,9 @@ class DetailViewController: UIViewController {
             for song in topLevelDictionary!.results {
                 if song.kind == "song" {
                     songList.append(song.trackName ?? "")
+                    if let songMS = song.trackTimeMillis {
+                        runTimes.append(songMS/1000)
+                    }
                 }
             }
             DispatchQueue.main.async {
@@ -23,6 +26,7 @@ class DetailViewController: UIViewController {
     }
     
     var songList: [String] = []
+    var runTimes: [Int] = []
     
     @IBOutlet weak var songListTableView: UITableView!
     @IBOutlet weak var albumNameLabel: UILabel!
@@ -48,7 +52,16 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath)
         
         cell.textLabel?.text = songList[indexPath.row]
+        cell.detailTextLabel?.text = formatTime(seconds: runTimes[indexPath.row])
+        
+        cell.selectionStyle = .none
         
         return cell
+    }
+    
+    func formatTime(seconds: Int) -> String {
+        let minutes: Int = seconds/60
+        let seconds = seconds%60
+        return seconds < 10 ? "\(minutes):0\(seconds)" : "\(minutes):\(seconds)"
     }
 }

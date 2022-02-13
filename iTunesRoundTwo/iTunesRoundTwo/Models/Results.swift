@@ -21,4 +21,5 @@ struct SearchResult: Decodable {
     var trackCount: Int
     var trackName: String?
     var kind: String?
+    var trackTimeMillis: Int?
 }
