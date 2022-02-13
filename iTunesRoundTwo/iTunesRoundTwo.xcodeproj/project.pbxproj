@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		D21D749F27B99991000E5ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D749E27B99991000E5ECB /* AppDelegate.swift */; };
 		D21D74A127B99991000E5ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74A027B99991000E5ECB /* SceneDelegate.swift */; };
-		D21D74A327B99991000E5ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74A227B99991000E5ECB /* ViewController.swift */; };
 		D21D74A627B99991000E5ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21D74A427B99991000E5ECB /* Main.storyboard */; };
 		D21D74A827B99992000E5ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21D74A727B99992000E5ECB /* Assets.xcassets */; };
 		D21D74AB27B99992000E5ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21D74A927B99992000E5ECB /* LaunchScreen.storyboard */; };
+		D21D74BB27B99A32000E5ECB /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74BA27B99A32000E5ECB /* NetworkController.swift */; };
+		D21D74BD27B99A4E000E5ECB /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74BC27B99A4E000E5ECB /* ResultError.swift */; };
+		D21D74BF27B99A72000E5ECB /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74BE27B99A72000E5ECB /* Results.swift */; };
+		D21D74C127B99A98000E5ECB /* SearchAlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74C027B99A98000E5ECB /* SearchAlbumTableViewController.swift */; };
+		D21D74C327B99AAD000E5ECB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21D74C227B99AAD000E5ECB /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D21D749B27B99991000E5ECB /* iTunesRoundTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesRoundTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21D749E27B99991000E5ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D21D74A027B99991000E5ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D21D74A227B99991000E5ECB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D21D74A527B99991000E5ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D21D74A727B99992000E5ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D21D74AA27B99992000E5ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D21D74AC27B99992000E5ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D21D74BA27B99A32000E5ECB /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		D21D74BC27B99A4E000E5ECB /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
+		D21D74BE27B99A72000E5ECB /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		D21D74C027B99A98000E5ECB /* SearchAlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAlbumTableViewController.swift; sourceTree = "<group>"; };
+		D21D74C227B99AAD000E5ECB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,83 @@
 		D21D749D27B99991000E5ECB /* iTunesRoundTwo */ = {
 			isa = PBXGroup;
 			children = (
+				D21D74B927B99A22000E5ECB /* Models */,
+				D21D74B827B99A1F000E5ECB /* Views */,
+				D21D74B327B99A06000E5ECB /* Controllers */,
+				D21D74B227B999BF000E5ECB /* Resources */,
+			);
+			path = iTunesRoundTwo;
+			sourceTree = "<group>";
+		};
+		D21D74B227B999BF000E5ECB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				D21D749E27B99991000E5ECB /* AppDelegate.swift */,
 				D21D74A027B99991000E5ECB /* SceneDelegate.swift */,
-				D21D74A227B99991000E5ECB /* ViewController.swift */,
-				D21D74A427B99991000E5ECB /* Main.storyboard */,
 				D21D74A727B99992000E5ECB /* Assets.xcassets */,
 				D21D74A927B99992000E5ECB /* LaunchScreen.storyboard */,
 				D21D74AC27B99992000E5ECB /* Info.plist */,
 			);
-			path = iTunesRoundTwo;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D21D74B327B99A06000E5ECB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D21D74B727B99A1B000E5ECB /* Model */,
+				D21D74B627B99A18000E5ECB /* View */,
+				D21D74B527B99A15000E5ECB /* Network */,
+				D21D74B427B99A13000E5ECB /* Cell */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D21D74B427B99A13000E5ECB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D21D74B527B99A15000E5ECB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D21D74BA27B99A32000E5ECB /* NetworkController.swift */,
+				D21D74BC27B99A4E000E5ECB /* ResultError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D21D74B627B99A18000E5ECB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D21D74C027B99A98000E5ECB /* SearchAlbumTableViewController.swift */,
+				D21D74C227B99AAD000E5ECB /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D21D74B727B99A1B000E5ECB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D21D74B827B99A1F000E5ECB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D21D74A427B99991000E5ECB /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D21D74B927B99A22000E5ECB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D21D74BE27B99A72000E5ECB /* Results.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21D74A327B99991000E5ECB /* ViewController.swift in Sources */,
 				D21D749F27B99991000E5ECB /* AppDelegate.swift in Sources */,
+				D21D74BD27B99A4E000E5ECB /* ResultError.swift in Sources */,
 				D21D74A127B99991000E5ECB /* SceneDelegate.swift in Sources */,
+				D21D74BB27B99A32000E5ECB /* NetworkController.swift in Sources */,
+				D21D74BF27B99A72000E5ECB /* Results.swift in Sources */,
+				D21D74C127B99A98000E5ECB /* SearchAlbumTableViewController.swift in Sources */,
+				D21D74C327B99AAD000E5ECB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +371,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9V3Q6X8V58;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTunesRoundTwo/Info.plist;
+				INFOPLIST_FILE = iTunesRoundTwo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +399,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9V3Q6X8V58;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTunesRoundTwo/Info.plist;
+				INFOPLIST_FILE = iTunesRoundTwo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
