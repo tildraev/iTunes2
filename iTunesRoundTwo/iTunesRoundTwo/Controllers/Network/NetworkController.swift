@@ -50,4 +50,31 @@ class NetworkController {
             }
         }.resume()
     }
+    
+    static func fetchSongList(collectionID: Int, completion: @escaping (Result<TopLevelDictionary, ResultError>) -> Void) {
+        guard let finalURL = URL(string: "https://itunes.apple.com/lookup?id=\(collectionID)&entity=song") else {
+            completion(.failure(.invalidURL("")))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: finalURL) { data, _, error in
+            if let error = error {
+                completion(.failure(.thrownError(error)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do {
+                let decodedTopLevelDictionary = try JSONDecoder().decode(TopLevelDictionary.self, from: data)
+                completion(.success(decodedTopLevelDictionary))
+            } catch {
+                completion(.failure(.unableToDecode))
+            }
+
+        }.resume()
+    }
 }

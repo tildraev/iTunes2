@@ -19,4 +19,6 @@ struct SearchResult: Decodable {
     var collectionName: String
     var artworkUrl100: String
     var trackCount: Int
+    var trackName: String?
+    var kind: String?
 }

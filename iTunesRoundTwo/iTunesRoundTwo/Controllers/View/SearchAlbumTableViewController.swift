@@ -48,7 +48,23 @@ class SearchAlbumTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC" {
-            
+            if let index = tableView.indexPathForSelectedRow {
+                if let destination = segue.destination as? DetailViewController {
+                    guard let topLevelDictionary = topLevelDictionary else {
+                        return
+                    }
+
+                    NetworkController.fetchSongList(collectionID: topLevelDictionary.results[index.row].collectionId) { result in
+                        switch result {
+                            
+                        case .success(let tld):
+                            destination.topLevelDictionary = tld
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                }
+            }
         }
     }
 }
